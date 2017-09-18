@@ -19,13 +19,12 @@ class CacaPalavrasController < ApplicationController
   end
 
   def show
-    caca_palavra = CacaPalavra.select(:id, :nome).find(params[:id])
-    respond_with caca_palavra
+    @caca_palavra = CacaPalavra.includes(:palavras, :professor, :turma).find(params[:id])
   end
 
   def update
     caca_palavra = CacaPalavra.find(params[:id])
-    if caca_palavra.update_attributes(params[:caca_palavra].permit(:nome))
+    if caca_palavra.update_attributes(params[:caca_palavra].permit(:nome, palavras_attributes: [:id, :palavra, :_destroy]))
       render json: caca_palavra.id
     else
       render json: caca_palavra.errors, status: :unprocessable_entity
