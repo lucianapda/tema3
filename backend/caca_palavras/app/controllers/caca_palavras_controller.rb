@@ -4,7 +4,7 @@ class CacaPalavrasController < ApplicationController
 
   def index
     caca_palavras = CacaPalavra.select(:id, :nome)
-    caca_palavras = @caca_palavras.where(params[:filters])
+    caca_palavras = caca_palavras.where(params[:filters])
 
     respond_with caca_palavras
   end
