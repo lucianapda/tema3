@@ -3,10 +3,10 @@ class TurmasController < ApplicationController
   respond_to :json
 
   def index
-    @turmas = Turma.select(:id, :nome)
-    @turmas = @turmas.where(params[:filters])
+    turmas = Turma.select(:id, :nome)
+    turmas = turmas.where(params[:filters])
 
-    respond_with @turmas
+    respond_with turmas
   end
 
   def create
@@ -19,8 +19,8 @@ class TurmasController < ApplicationController
   end
 
   def show
-    @turma = Turma.select(:id, :nome).find(params[:id])
-    respond_with @turma
+    turma = Turma.select(:id, :nome).find(params[:id])
+    respond_with turma
   end
 
   def update

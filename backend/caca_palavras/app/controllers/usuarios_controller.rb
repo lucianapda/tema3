@@ -3,10 +3,10 @@ class UsuariosController < ApplicationController
   respond_to :json
 
   def index
-    @usuarios = Usuario.select(:id, :nome, :email, :tipo)
-    @usuarios = @usuarios.where(params[:filters])
+    usuarios = Usuario.select(:id, :nome, :email, :tipo)
+    usuarios = usuarios.where(params[:filters])
 
-    respond_with @usuarios
+    respond_with usuarios
   end
 
   def show
