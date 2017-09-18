@@ -9,6 +9,7 @@ gem 'rails', '~> 5.1.4'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'jbuilder', '~> 2.5'
 gem 'enumerize'
+gem 'responders'
 
 group :development do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
