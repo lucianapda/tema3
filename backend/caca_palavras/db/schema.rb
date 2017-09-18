@@ -47,17 +47,11 @@ ActiveRecord::Schema.define(version: 20170916165850) do
   end
 
   create_table "usuarios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "provider", default: "email", null: false
-    t.string "uid", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
     t.string "nome"
     t.string "email"
     t.integer "tipo"
-    t.text "tokens"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_usuarios_on_email", unique: true
-    t.index ["uid", "provider"], name: "index_usuarios_on_uid_and_provider", unique: true
   end
 
 end
