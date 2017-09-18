@@ -8,8 +8,6 @@ end
 gem 'rails', '~> 5.1.4'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'jbuilder', '~> 2.5'
-gem 'devise_token_auth'
-gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :x64_mingw, :mingw]
 gem 'enumerize'
 
 group :development do

@@ -1,7 +1,5 @@
 # encoding: utf-8
 class UsuariosController < ApplicationController
-  #before_action :authenticate_usuario!
-
   respond_to :json
 
   def index

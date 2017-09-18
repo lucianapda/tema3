@@ -1,7 +1,5 @@
 # encoding: utf-8
 class CacaPalavrasController < ApplicationController
-  #before_action :authenticate_usario!
-
   respond_to :json
 
   def index
