@@ -4,5 +4,15 @@ class Turma < ActiveRecord::Base
 
   has_many :caca_palavras
 
-  validates :nome, presence: true 
+  before_destroy :valida_exclusao
+
+  validates :nome, presence: true
+
+  private
+
+  def valida_exclusao
+    return true if alunos.blank?
+
+    raise 'Não é possível excluir uma turma com alunos associados.'
+  end
 end

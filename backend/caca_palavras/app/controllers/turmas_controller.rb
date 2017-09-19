@@ -19,8 +19,7 @@ class TurmasController < ApplicationController
   end
 
   def show
-    turma = Turma.select(:id, :nome).find(params[:id])
-    respond_with turma
+    @turma = Turma.select(:id, :nome).find(params[:id])
   end
 
   def update
@@ -30,5 +29,10 @@ class TurmasController < ApplicationController
     else
       render json: turma.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    Turma.find(params[:id]).destroy
+    render json: :ok
   end
 end
