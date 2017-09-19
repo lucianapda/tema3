@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170916165850) do
+ActiveRecord::Schema.define(version: 20170919033928) do
 
   create_table "alunos_notas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "aluno_id"
@@ -28,10 +28,12 @@ ActiveRecord::Schema.define(version: 20170916165850) do
     t.string "nome"
     t.integer "professor_id"
     t.integer "turma_id"
+    t.text "puzzle"
   end
 
   create_table "notas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "caca_palavra_id"
+    t.integer "aluno_id"
     t.decimal "nota", precision: 4, scale: 2
     t.index ["caca_palavra_id"], name: "index_notas_on_caca_palavra_id"
   end

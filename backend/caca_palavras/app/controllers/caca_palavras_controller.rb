@@ -24,10 +24,17 @@ class CacaPalavrasController < ApplicationController
 
   def update
     caca_palavra = CacaPalavra.find(params[:id])
+
     if caca_palavra.update_attributes(params[:caca_palavra].permit(:nome, palavras_attributes: [:id, :palavra, :_destroy]))
       render json: caca_palavra.id
     else
       render json: caca_palavra.errors, status: :unprocessable_entity
     end
+  end
+
+  def valida_palavras
+    caca_palavra = CacaPalavra.find(params[:id])
+
+    render json: { nota: caca_palavra.registra_nota(params[:aluno_id], params[:palavras_encontradas]) }, status: :ok
   end
 end

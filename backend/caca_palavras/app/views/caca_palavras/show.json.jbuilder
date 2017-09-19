@@ -9,3 +9,5 @@ json.palavras @caca_palavra.palavras do |palavra|
   json.id palavra.id
   json.palavra palavra.palavra
 end
+
+json.puzzle @caca_palavra.puzzle
