@@ -1,24 +1,49 @@
-# README
+Caça Palavras
+=============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Trabalho de PIII
 
-Things you may want to cover:
+## Dependências
+- [Ruby 2.3.1](https://www.ruby-lang.org/pt/)
+- [Bundler](http://bundler.io/)
 
-* Ruby version
+1. Clone do projeto
+```bash
+git clone git@github.com:lucianapda/tema3.git
+```
 
-* System dependencies
+2. Acessar diretório
+```bash
+cd tema3/backend/caca_palavras
+```
 
-* Configuration
+3. Rodar bundle install
+```bash
+bundle install
+```
 
-* Database creation
+4. Ajustar database.rb com username e password do MySQL
+```yml
+  username: root
+  password: root
+```
 
-* Database initialization
+5. Criar databases
+```bash
+rake db:create
+```
 
-* How to run the test suite
+6. Rodar migrates
+```bash
+rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+7. Rodar seeds
+```bash
+rake db:seed
+```
 
-* Deployment instructions
-
-* ...
+8. Iniciar aplicação
+```bash
+rails s
+```

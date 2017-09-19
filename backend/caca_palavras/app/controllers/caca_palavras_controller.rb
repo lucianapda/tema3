@@ -32,6 +32,11 @@ class CacaPalavrasController < ApplicationController
     end
   end
 
+  def destroy
+    CacaPalavra.where(id: params[:id]).destroy
+    render nothing: true
+  end
+
   def valida_palavras
     caca_palavra = CacaPalavra.find(params[:id])
 

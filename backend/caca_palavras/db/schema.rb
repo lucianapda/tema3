@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170919033928) do
 
-  create_table "alunos_notas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "aluno_id"
-    t.bigint "nota_id"
-    t.index ["nota_id"], name: "index_alunos_notas_on_nota_id"
-  end
-
   create_table "alunos_turmas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "aluno_id"
     t.bigint "turma_id"
