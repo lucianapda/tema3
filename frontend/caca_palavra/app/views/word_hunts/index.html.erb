@@ -1,0 +1,18 @@
+<div>
+  <table cellpadding="7" cellspacing="0">
+    <thead>
+      <tr>
+        <th class='name'>Nome</th>
+        <th class='teacher'>Professor</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @word_hunts.each do |word_hunt| %>
+      <tr>
+        <td><%= word_hunt.name %></td>
+        <td><%= word_hunt.teacher.name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

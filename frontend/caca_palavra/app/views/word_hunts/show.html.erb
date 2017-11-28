@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag 'wordfinder' %>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <%= javascript_include_tag 'gridboard', 'wordfinder' %>
+  </head>
+  <body>
+    <div id="wordfinder-board"></div>
+    <%= hidden_field_tag "words", @words, { :id => "words" } %>
+    <script>
+      var words = $('#words').val();
+      var wf = new WordFinder({
+        id: 'wordfinder-board',
+        words: words
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<div id="content">
+  <div class="login">
+    <%
+    [:notice, :error, :warning, :alert].each do |key|
+      if flash[key]
+        case key
+        when :alert
+          %><div class="content_msg msg_error"><span class='bold'>ERRO:</span> <%= flash[key] %></div><%
+        when :notice
+          %><div class="content_msg msg_success"><span class='bold'>SUCESSO:</span> <%= flash[key] %></div><%
+        else
+          %><div class="content_msg msg_alert"><span class='bold'>ALERTA:</span> <%= flash[key] %></div><%
+        end
+      end
+    end
+    %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { method: :post, class: :new_session }) do |f| %>
+      <div class='input_field'>
+        <div class='icon_user'></div>
+        <%= f.text_field :email, placeholder: "E-mail", required: true %>
+      </div>
+      <div class='input_field'>
+        <div class='icon_password'></div>
+        <%= f.password_field :password, placeholder: "Senha", required: true %>
+      </div>
+      <div><%= f.submit "ENTRAR" %></div>
+    <% end %>
+  </div>

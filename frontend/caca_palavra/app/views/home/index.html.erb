@@ -1,0 +1,18 @@
+<div id='header'>
+  <div class='logo logo_index'></div>
+
+  <div class='right'>
+  <div class='user_icon'></div>
+    <%= link_to "<div class='logout'></div>".html_safe, destroy_user_session_path, method: :delete, :confirm => 'Deseja realmente sair do sistema?' %>
+  </div>
+</div>
+<div id='content'>
+  <div class='menu left'>
+    <ul class='top'>
+      <li class='teachers'></li>
+      <li class='students'></li>
+      <li class='teams'></li>
+      <li class='word_hunts'><%= link_to 'Caça Palavras', word_hunts_path %></li>
+    </ul>
+  </div>
+</div>

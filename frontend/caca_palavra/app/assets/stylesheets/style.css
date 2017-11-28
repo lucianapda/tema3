@@ -1,0 +1,324 @@
+/* CSS Reset */
+html, body, div, span, h1, h2, ul, li, p {
+  border:0;
+  background:transparent;
+  font-size:100%;
+  outline:0;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11px;
+  background-color: #EEEEEE;
+  margin: 0;
+  padding: 0;
+  min-height: 550px;
+}
+
+a, a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Padrões */
+.bold {
+  font-weight: bold;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.title {
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #D0D0D0;
+  border-left: 1px solid #D0D0D0;
+  border-right: 1px solid #D0D0D0;
+  color: #2B467D;
+  font-family: 'Bitter', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 8px 11px 8px 11px;
+}
+
+.subtitle {
+  background-color: #FFF;
+  color: #2B467D;
+  font-family: 'Bitter', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 8px 11px 8px 11px;
+}
+
+/* Cabeçalho */
+#header {
+  display: inline-block;
+  font-size: 11px;
+  height: 100px;
+  width: 100%;
+}
+
+#header a {
+  color: #FFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#header .logo {
+  background-position: -272px 0px;
+  height: 34px;
+  left: 25px;
+  position: absolute;
+  top: 10px;
+  width: 29px;
+}
+
+#header .right {
+  height: 55px;
+  margin-right: 10px;
+}
+
+#header .right .user_icon {
+  background: url('/images/user.png') no-repeat;
+  float: left;
+  top: 10px;
+  height: 64px;
+  position: relative;
+  padding-right: 16px;
+  width: 64px;
+}
+
+#header .right .logout {
+  background: url(/images/exit.png);
+  top: 10px;
+  height: 64px;
+  position: relative;
+  width: 64px;
+}
+
+#header .right .help {
+  padding-right: 5px;
+  width: 85px;
+}
+
+#header .right a div {
+  display: inline-block;
+}
+
+/* Menu */
+.menu {
+  height: 400px;
+  width: 70px;
+  border: 1px;
+}
+
+.menu .bottom {
+  position: absolute;
+  bottom: 20px;
+}
+
+.menu .top {
+  position: absolute;
+  top: 100px;
+}
+
+.menu .module {
+  color: #000;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11px;
+  padding-bottom: 10px;
+  list-style: none;
+  margin-top: 0px;
+  position: relative;
+  text-align: center;
+  width: 80px;
+}
+
+.menu .module .title {
+  border-top: 1px solid #D0D0D0;
+  cursor: default;
+}
+
+.menu .icon {
+  height: 24px;
+  margin: 0 auto;
+  width: 24px;
+}
+
+.menu .financial.module {
+  margin-top: -5px;
+}
+
+/* Dropdown Menu */
+#content .menu .module .dropdown {
+  background-color: #2B477D;
+  display: none;
+  left: 80px;
+  padding-left: 4px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 185px;
+  z-index: 999;
+}
+
+#content .menu .module .dropdown .arrow {
+  background-position: -266px -8px;
+  height: 12px;
+  left: -6px;
+  position: absolute;
+  top: 13px;
+  width: 6px;
+}
+
+#content .menu .module .dropdown .subtitle {
+  background-color: #FFF;
+  border-right: 1px solid #D0D0D0;
+}
+
+#content .menu .module .dropdown .list {
+  background-color: #FFF;
+  border-right: 1px solid #D0D0D0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  list-style: none;
+}
+
+#content .menu .module .dropdown .list .item {
+  display: block;
+  padding: 5px 0 5px 11px;
+}
+
+#content .menu .module .dropdown .list .item:hover {
+  background-color: #EAEAEA;
+}
+
+#content .menu .module .dropdown .sublist .item {
+  padding-left: 22px;
+}
+
+#content .menu .module .dropdown .last {
+  border-bottom: 1px solid #D0D0D0;
+}
+
+#content .menu .module .dropdown .subtitle .entries {
+  background-position: -1px -98px;
+  height: 14px;
+  margin-top: 3px;
+  margin-right: 6px;
+  padding-right: 14px;
+  width: 11px;
+}
+
+#content .menu .module .dropdown .subtitle .billets {
+  background-position: 0px -336px;
+  height: 13px;
+  margin-right: 5px;
+  margin-top: 1px;
+  padding-right: 7px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .reports {
+  background-position: -1px -112px;
+  height: 16px;
+  margin-right: 7px;
+  padding-right: 7px;
+  width: 14px;
+}
+
+#content .menu .module .dropdown .subtitle .national {
+  background-position: 0px -256px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .international {
+  background-position: 0px -272px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .integration {
+  background-position: 0px -288px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .tracking {
+  background-position: 0px -304px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .importation {
+  background-position: 0px -304px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+#content .menu .module .dropdown .subtitle .exchange {
+  background-position: 0px -320px;
+  height: 16px;
+  margin-left: -2px;
+  margin-right: 6px;
+  width: 16px;
+}
+
+/* Cadastros, Relatórios e Administração */
+.line .session_title {
+  color: #2B477D;
+  font-family: 'Bitter', sans-serif;
+  font-weight: lighter;
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+.line .list {
+  margin-left: 20px;
+}
+
+.line .list .item {
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 20px;
+  text-align: center;
+  vertical-align: top;
+  width: 140px;
+}
+
+.line .list .item a {
+  color: #000;
+}
+
+.line .list .item .icon {
+  height: 32px;
+  margin-bottom: 5px;
+  position: relative;
+  right: -38px;
+  width: 26px;
+}

@@ -1,0 +1,102 @@
+body {
+  background-color: #2E8B57;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  min-height: 550px;
+  padding: 0;
+}
+
+#content .login {
+  background-color: #FFFFFF;
+  border: 1px solid #223665;
+  border-radius: 5px;
+  padding: 11px 34px;
+  left: 50%;
+  margin: -115px 0 0 -200px;
+  position: absolute;
+  top: 50%;
+}
+
+#content .login div.input_field {
+  background-color: #FFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  height: 39px;
+  padding: 5px 0 4px;
+  position: relative;
+  margin-bottom: 5px;
+  width: 290px;
+}
+
+#content .login div.input_field .icon_user {
+  background-image: url('../images/user_login.png');
+  float: left;
+  height: 14px;
+  left: 14px;
+  position: relative;
+  top: 13px;
+  width: 15px;
+}
+
+#content .login div.input_field .icon_password {
+  background-image: url('../images/key_login.png');
+  float: left;
+  height: 14px;
+  left: 14px;
+  position: relative;
+  top: 13px;
+  width: 14px;
+}
+
+#content .login input[type=password], #content .login input[type=text] {
+  border: 1px solid #223665;
+  border-radius: 5px;
+  color: #000;
+  float: right;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  padding: 10px 0 10px 3px;
+  margin-right: 5px;
+  width: 238px;
+}
+
+#content .login input[type=submit] {
+  background-color: #233767;
+  border: 1px solid #223665;
+  border-radius: 5px;
+  color: #FFF;
+  float: right;
+  font-size: 18px;
+  font-family: 'Bitter', sans-serif;
+  margin-right: 75px;
+  padding: 11px 34px;
+  text-transform: uppercase;
+}
+
+#content .login .remember_me {
+  color: #2C4680;
+  font-size: 11px;
+  margin: 0 32px 0 5px;
+  position: relative;
+  top: 15px;
+}
+
+.content_msg {
+  border: 1px solid;
+  margin-right: 27px;
+  padding: 5px;
+  width: 280px;
+}
+
+.msg_error, .msg_alert {
+  background-color: #FFFF90;
+  border-color: #FFCDCD;
+}
+
+.msg_success {
+  border: 1px solid #090;
+  background: #CAF8C6;
+  color: #090;
+}
